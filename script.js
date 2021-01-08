@@ -5,6 +5,7 @@ canvas.height = window.innerHeight;
 
 let particlesArray;
 let mouseRadiusRatio = 110;
+let userInteraction = true;
 
 const mouse = {
     x: null,
@@ -43,26 +44,27 @@ class Particle {
             this.dirY *= -1;
         }
 
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
+        if (userInteraction) {
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
 
-        let shift = 5;
-        if (distance < mouse.radius + this.size) {
-            if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-                this.x += shift;
-            }
-            if (mouse.x > this.x && this.x > this.size * 10) {
-                this.x -= shift;
-            }
-            if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
-                this.y += shift;
-            }
-            if (mouse.y > this.y && this.y > this.size * 10) {
-                this.y -= shift;
+            let shift = 5;
+            if (distance < mouse.radius + this.size) {
+                if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                    this.x += shift;
+                }
+                if (mouse.x > this.x && this.x > this.size * 10) {
+                    this.x -= shift;
+                }
+                if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                    this.y += shift;
+                }
+                if (mouse.y > this.y && this.y > this.size * 10) {
+                    this.y -= shift;
+                }
             }
         }
-
         this.x += this.dirX;
         this.y += this.dirY;
 
@@ -72,7 +74,7 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.width * canvas.height) / 9000;
+    let numberOfParticles = (canvas.width * canvas.height) / 13000;
     for (let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random() * 5) + 1
         let x = Math.random() * ((innerWidth - size * 2) - size * 2) + size * 2;
