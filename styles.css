@@ -6,8 +6,8 @@
     padding: 0;
 }
 
-.container {
-    background-image: url();
+body {
+    background-color: rgb(117, 117, 117);
 }
 
 .navbar-container {
@@ -15,11 +15,12 @@
     top: 0px;
     width: 100vw;
     height: 35px;
+    z-index: 10;
     background:#535d66;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 7px 8px #888888;
+    box-shadow: 8px 8px 10px rgb(31, 52, 65);
 }
 
 .navbar-menu {
@@ -30,16 +31,28 @@
 .navbar-item {
     width: 100px;
     height: 35px;
-    padding-top: 7px;
+    padding-top: 8px;
     text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
 }
 
 .navbar-item:hover {
     border-bottom: 4px solid #73af9c;
+    transition: all 0.1s ease;
 }
 
-.navbar-item a {
+a {
     text-decoration: none;
-    color: white;
-    font-weight: 700;
+}
+
+#background-animation {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: radial-gradient(#485777, #2b2e3d);
 }
