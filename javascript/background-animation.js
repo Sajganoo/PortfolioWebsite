@@ -5,7 +5,7 @@ canvas.height = window.innerHeight;
 
 let particlesArray;
 let mouseRadiusRatio = 110;
-let userInteraction = true;
+let userInteraction = false;
 
 const mouse = {
     x: null,
@@ -74,7 +74,7 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.width * canvas.height) / 13000;
+    let numberOfParticles = (canvas.width * canvas.height) / 8000;
     for (let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random() * 5) + 1
         let x = Math.random() * ((innerWidth - size * 2) - size * 2) + size * 2;
