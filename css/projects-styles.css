@@ -5,19 +5,16 @@
     width: 60%;
     margin: 10px auto;
     padding: 40px;
-    opacity: 0.9;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    /* background: blueviolet; */
 }
 
 .project {
     display: grid;
     align-items: center;
     justify-content: center;
-    /* background: rosybrown; */
     grid-template-columns: 1fr 1fr;
 }
 
@@ -25,18 +22,26 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    /* border: 2px solid black; */
     position: relative;
     width: 95%;
     margin: 20px;
+    padding: 15px;
+    border-radius: 25px;
+    background: rgb(68, 105, 209); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
 }
 
 .image-img {
+    border-radius: 25px;
     display: block;
     width: 100%;
 }
 
 .image-overlay {
+    border-radius: 25px;
     position: absolute;
     top: 0px;
     left: 0px;
