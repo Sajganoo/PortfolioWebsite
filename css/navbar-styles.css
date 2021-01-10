@@ -26,14 +26,11 @@
     font-weight: 700;
 }
 
+.active,
 .navbar-item:hover {
     border-radius: 10px;
     background: rgb(0, 129, 180);
     transition: all 0.3s ease;
-}
-
-.active {
-    background: rgb(8, 115, 177);
 }
 
 .navbar-menu a {
