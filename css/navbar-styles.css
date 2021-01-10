@@ -3,7 +3,7 @@
     top: 0px;
     width: 100vw;
     height: 35px;
-    z-index: 10;
+    z-index: 100;
     background: rgb(100, 125, 220);
     display: flex;
     align-items: center;
