@@ -29,7 +29,7 @@
 .active,
 .navbar-item:hover {
     border-radius: 10px;
-    background: rgb(0, 129, 180);
+    background:  rgb(39, 178, 233);
     transition: all 0.3s ease;
 }
 
