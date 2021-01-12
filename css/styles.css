@@ -13,25 +13,5 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-.home-container {
-    /* background: blueviolet; */
-    display: block;
-    max-width: 1500px;
-    align-items: center;
-    justify-content: center;
-    margin: 180px auto 50px auto;
-    text-align: center;
-    color: white;
-}
-
-.my-img {
-    margin: 30px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 50px rgb(0, 129, 180);
-}
-
-.txt-type > .txt {
-    border-right: 0.1em solid white;
+    font-family: "Montserrat", sans-serif;
 }
