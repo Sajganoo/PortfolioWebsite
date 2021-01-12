@@ -14,8 +14,8 @@
     display: flex;
     list-style-type: none;
     align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid rgb(199, 193, 193);
+    justify-content: center;
+    /* border: 1px solid rgb(199, 193, 193); */
     border-radius: 20px;
     padding: 3px;
 }
@@ -24,12 +24,14 @@
     height: 100%;
     font-size: 22px;
     border-radius: 15px;
+    margin: 0 5px;
     padding: 10px;
     color: white;
     text-transform: uppercase;
     transition: all 0.1s ease;
 }
 
+.filter-item.active,
 .filter-item:hover {
     background:rgb(100, 125, 220);
     cursor: pointer;
