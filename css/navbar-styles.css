@@ -12,6 +12,7 @@
 }
 
 .navbar-menu {
+    display: flex;
     margin: 10px;
     list-style: none;
 }
@@ -24,6 +25,7 @@
     text-decoration: none;
     color: white;
     font-weight: 700;
+    margin: 0px 8px;
 }
 
 .active,
@@ -35,4 +37,51 @@
 
 .navbar-menu a {
     text-decoration: none;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu.small {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-container {
+        position: absolute;
+        flex-direction: column;
+        height: 35px;
+    }
+
+    .navbar-container.small {
+        height: 30%;
+    }
+
+    .navbar-item {
+        margin: 5px;
+    }
 }
