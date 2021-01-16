@@ -1,9 +1,8 @@
-const currentLocation = location.href;
-const menuItems = document.querySelectorAll('a');
-const listItems = document.querySelectorAll('li');
+const toggleButton = document.querySelector('.toggle-button');
+const navbarContainer = document.querySelector('.navbar-container');
+const navbarMenu = document.querySelector('.navbar-menu');
 
-for (let i = 0; i < menuItems.length; i++) {
-    if (menuItems[i].href === currentLocation) {
-        listItems[i].className += " active";
-    }
-}
+toggleButton.addEventListener('click', () => {
+    navbarMenu.classList.toggle('small');
+    navbarContainer.classList.toggle('small');
+});
