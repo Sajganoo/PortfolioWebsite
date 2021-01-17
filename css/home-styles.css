@@ -1,15 +1,20 @@
 .home-container {
-    /* background: blueviolet; */
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
-    max-width: 1500px;
+    width: 80%;
+    height: 55%;
     align-items: center;
     justify-content: center;
-    margin: 180px auto 50px auto;
+    margin: 20vh auto 50px auto;
     text-align: center;
     color: white;
 }
 
 .my-img {
+    height: 50%;
     margin: 30px;
     border-radius: 50%;
     box-shadow: 0px 0px 50px rgb(0, 129, 180);
@@ -17,4 +22,10 @@
 
 .txt-type > .txt {
     border-right: 0.1em solid white;
+}
+
+@media (max-width: 600px) {
+    .home-container {
+        font-size: 80%;
+    }
 }
