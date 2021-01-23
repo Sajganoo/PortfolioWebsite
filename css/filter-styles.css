@@ -1,0 +1,126 @@
+nav {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+}
+
+nav .drop-btn {
+    width: 400px;
+    background: rgb(100, 125, 220);
+    border-radius: 5px;
+    line-height: 55px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    padding: 0 20px;
+}
+
+nav .drop-btn span {
+    float: right;
+    line-height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+nav .tooltip {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    height: 15px;
+    width: 15px;
+    background: rgb(100, 125, 220);
+    transform: rotate(45deg);
+    display: none;
+}
+
+nav .tooltip.show {
+    display: block;
+}
+
+nav .wrapper {
+    position: absolute;
+    top: 65px;
+    display: flex;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: rgb(100, 125, 220);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+nav .wrapper.show {
+    display: block;
+    display: flex;
+}
+
+.wrapper ul {
+    width: 400px;
+    list-style: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.wrapper ul li {
+    line-height: 55px;
+}
+
+.wrapper ul li a {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 10px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.wrapper ul li:hover a {
+    background: rgb(39, 178, 233);
+}
+
+ul li a .icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 13px;
+    background: rgb(96, 200, 241);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li a .icon span {
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+ul li a i {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.wrapper ul.iot-drop,
+.wrapper ul.programming-drop,
+.wrapper ul.design-drop {
+    display: none;
+}
+
+.wrapper .arrow {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.wrapper .arrow span {
+    margin-right: 15px;
+}
