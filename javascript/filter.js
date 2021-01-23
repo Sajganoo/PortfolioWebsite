@@ -1,33 +1,61 @@
-const filter = document.querySelector('.filter-menu');
-const projects = document.querySelector('.project');
+const drop_btn = document.querySelector(".drop-btn span");
+const tooltip = document.querySelector(".tooltip");
 
-const highlightActive = function(category) {
-    Array.from(filter.children).forEach(child => {
-        if (child.textContent === category) {
-            child.classList.add('active');
-        } else {
-            child.classList.remove('active');
-        }
-    });
-}
+const menu_wrapper = document.querySelector(".wrapper");
+const menu_bar = document.querySelector(".menu-bar");
 
-filter.addEventListener('click', event => {
-    showProjectsOf(event.target.textContent);
-    highlightActive(event.target.textContent)
-});
+const programming_drop = document.querySelector(".programming-drop");
+const programming_item = document.querySelector(".programming-item");
+const programming_btn = document.querySelector(".back-programming-btn");
 
-const showProjectsOf = function(category) {
-    Array.from(projects.children).forEach(child => {
-        if (category === 'all') {
-            child.style.display = 'flex';
-            return;
-        }
-        if (!child.classList.contains(category)) {
-            child.style.display = 'none';
-        } else {
-            child.style.display = 'flex';
-        }
-    }
-)};
+const design_drop = document.querySelector(".design-drop");
+const design_item = document.querySelector(".design-item");
+const design_btn = document.querySelector(".back-design-btn");
 
-highlightActive('all');
+const iot_drop = document.querySelector(".iot-drop");
+const iot_item = document.querySelector(".iot-item");
+const iot_btn = document.querySelector(".back-iot-btn");
+
+drop_btn.onclick = () => {
+    menu_wrapper.classList.toggle("show");
+    tooltip.classList.toggle("show");
+};
+
+programming_item.onclick = () => {
+    menu_bar.style.marginLeft = "-400px";
+    programming_drop.style.display = "block";
+};
+
+programming_btn.onclick = () => {
+    menu_bar.style.marginLeft = "0px";
+    programming_drop.style.display = "none";
+};
+
+design_item.onclick = () => {
+    menu_bar.style.marginLeft = "-400px";
+    design_drop.style.display = "block";
+};
+
+design_btn.onclick = () => {
+    menu_bar.style.marginLeft = "0px";
+    design_drop.style.display = "none";
+};
+
+iot_item.onclick = () => {
+    menu_bar.style.marginLeft = "-400px";
+    iot_drop.style.display = "block";
+};
+
+iot_btn.onclick = () => {
+    menu_bar.style.marginLeft = "0px";
+    iot_drop.style.display = "none";
+};
+
+const selectable = document.querySelectorAll('.selectable');
+console.log(selectable);
+
+// for (let i = 0; i < selectable.length; i++) {
+//     selectable[i].addEventListener('click', event => {
+        
+//     });
+// }
