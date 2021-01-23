@@ -1,46 +1,7 @@
-.filter-container {
-    display: block;
-    margin: 10px auto;
-    padding: 30px;
-}
-
-.filter {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.filter-menu {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid rgb(199, 193, 193); */
-    border-radius: 20px;
-    padding: 3px;
-}
-
-.filter-item {
-    height: 100%;
-    font-size: 22px;
-    border-radius: 15px;
-    margin: 0 5px;
-    padding: 10px;
-    color: white;
-    text-transform: uppercase;
-    transition: all 0.1s ease;
-}
-
-.filter-item.active,
-.filter-item:hover {
-    background: rgb(39, 178, 233);
-    cursor: pointer;
-}
-
 .projects-container {
     z-index: 10;
     position: relative;
-    top: 0px;
+    top: 120px;
     width: 80%;
     margin: 10px auto;
     align-items: center;
@@ -65,12 +26,6 @@
     margin: 15px;
     border-radius: 25px;
     box-shadow: 0px 0px 40px rgb(0, 129, 180);
-    /* padding: 15px;
-    background: rgb(68, 105, 209);
-    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
-    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); */
 }
 
 .image-img {
