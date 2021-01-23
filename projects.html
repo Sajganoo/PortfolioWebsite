@@ -1,94 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiktor Ciołkowski</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navbar-styles.css">
-    <link rel="stylesheet" href="css/background-animation-styles.css">
-    <link rel="stylesheet" href="css/projects-styles.css">
-    <script src="https://kit.fontawesome.com/40db5a39f6.js" crossorigin="anonymous"></script>
-    <script src="javascript/background-animation.js" defer></script>
-    <script src="javascript/navbar.js" defer></script>
-    <script src="javascript/filter.js" defer></script>
-</head>
-<body>
-    <div class="navbar-container">
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <ul class="navbar-menu">
-            <a href="index.html"><li class="navbar-item">Home</li></a>
-            <a href="projects.html"><li class="navbar-item active">Projects</li></a>
-            <a href="skills.html"><li class="navbar-item">Skills</li></a>
-            <a href="books.html"><li class="navbar-item">Gallery</li></a>
-            <a href="gallery.html"><li class="navbar-item">About me</li></a>
-        </ul>
-    </div>
-
-    <canvas id="background-animation"></canvas>
-
-    <div class="filter-container">
-        <div class="filter">
-            <ul class="filter-menu">
-                <li class="filter-item">all</li>
-                <li class="filter-item">programming</li>
-                <li class="filter-item">design</li>
-                <li class="filter-item">arduino</li>
-                <li class="filter-item">cyber security</li>
-                <li class="filter-item">linux</li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wiktor Ciołkowski</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/navbar-styles.css" />
+        <link rel="stylesheet" href="css/background-animation-styles.css" />
+        <link rel="stylesheet" href="css/projects-styles.css" />
+        <link rel="stylesheet" href="css/filter-styles.css">
+        <script
+            src="https://kit.fontawesome.com/40db5a39f6.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="javascript/background-animation.js" defer></script>
+        <script src="javascript/navbar.js" defer></script>
+        <script src="javascript/filter.js" defer></script>
+    </head>
+    <body>
+        <div class="navbar-container">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul class="navbar-menu">
+                <a href="index.html"><li class="navbar-item">Home</li></a>
+                <a href="projects.html"
+                    ><li class="navbar-item active">Projects</li></a
+                >
+                <a href="skills.html"><li class="navbar-item">Skills</li></a>
+                <a href="books.html"><li class="navbar-item">Gallery</li></a>
+                <a href="gallery.html"><li class="navbar-item">About me</li></a>
             </ul>
         </div>
-    </div>
 
-    <div class="projects-container">
-        <!-- <h1>Programming <i class="fas fa-laptop-code"></i></h1> -->
-        <div class="project">
-            <div class="image programming">
-                <img class="image-img" src="/img/portfolioWebsitePreview.png" alt="pathfinding">
-                <div class="image-overlay">
-                    <div class="image-title">Portfolio Website</div>
-                    <div class="image-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore officia voluptatibus est soluta dolore neque dignissimos, provident voluptatem animi ea porro in corrupti exercitationem laborum ipsum architecto odit deserunt eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolorem cupiditate omnis rem voluptatibus est quis quisquam? Nemo non, velit reiciendis, cumque consectetur deleniti repellendus, repudiandae expedita minus laudantium qui?</div>
-                    <a href="https://github.com/Sajganoo/PortfolioWebsite" target="blank" style="color: white;">
-                        <i class="fab fa-github github-logo"></i>
-                    </a>
-                </div>
+        <canvas id="background-animation"></canvas>
+
+        <nav>
+            <div class="drop-btn">
+                Select a category <span class="fas fa-caret-down"></span>
             </div>
-            <div class="image programming">
-                <img class="image-img" src="/img/portfolioWebsitePreview.png" alt="pathfinding">
-                <div class="image-overlay">
-                    <div class="image-title">Game Of Life</div>
-                    <div class="image-description">The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor or any other Turing machine.</div>
-                    <a href="https://github.com/Sajganoo/GameOfLife" target="blank" style="color: white;">
-                        <i class="fab fa-github github-logo"></i>
-                    </a>
-                </div>
+            <div class="tooltip"></div>
+            <div class="wrapper">
+                <ul class="menu-bar">
+                    <li class="programming-item">
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-laptop-code"></span>
+                            </div>
+                            Programming
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="design-item">
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-cubes"></span>
+                            </div>
+                            3D Design
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li class="iot-item">
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-network-wired"></span>
+                            </div>
+                            Internet Of Things
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-user-secret"></span>
+                            </div>
+                            Cyber Security
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fab fa-linux"></span>
+                            </div>
+                            Linux
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-globe"></span>
+                            </div>
+                            All
+                        </a>
+                    </li>
+                </ul>
+                <!-- Programming Menu-items -->
+                <ul class="programming-drop">
+                    <li class="arrow back-programming-btn">
+                        <span class="fas fa-arrow-left"></span>Programming
+                    </li>
+                    <li>
+                        <a href="#" class="selectable">
+                            <div class="icon">
+                                <span class="fas fa-code"></span>
+                            </div>
+                            Web Development
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="selectable">
+                            <div class="icon">
+                                <span class="fas fa-mobile-alt"></span>
+                            </div>
+                            Mobile Development
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-desktop"></span>
+                            </div>
+                            Desktop Development
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-chess"></span>
+                            </div>
+                            Game Development
+                        </a>
+                    </li>
+                </ul>
+                <!-- Design Menu-items -->
+                <ul class="design-drop">
+                    <li class="arrow back-design-btn">
+                        <span class="fas fa-arrow-left"></span>3D Design
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fab fa-foursquare"></span>
+                            </div>
+                            Fusion 360
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-cube"></span>
+                            </div>
+                            Blender
+                        </a>
+                    </li>
+                </ul>
+                <!-- Internet Of Things Menu-items -->
+                <ul class="iot-drop">
+                    <li class="arrow back-iot-btn">
+                        <span class="fas fa-arrow-left"></span>Internet Of Things
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fas fa-microchip"></span>
+                            </div>
+                            Arduino
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <span class="fab fa-raspberry-pi"></span>
+                            </div>
+                            Raspberry Pi
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="image design">
-                <img class="image-img" src="/img/portfolioWebsitePreview.png" alt="pathfinding">
-                <div class="image-overlay">
-                    <div class="image-title">Pathdinding Visualizer</div>
-                    <div class="image-description">Pathfinding or pathing is the plotting, by a computer application, of the shortest route between two points. It is a more practical variant on solving mazes. This field of research is based heavily on Dijkstra's algorithm for finding the shortest path on a weighted graph. Pathfinding is closely related to the shortest path problem, within graph theory, which examines how to identify the path that best meets some criteria (shortest, cheapest, fastest, etc) between two points in a large network.</div>
-                    <a href="https://github.com/Sajganoo/PathfindingVisualizer" target="blank" style="color: white;">
-                        <i class="fab fa-github github-logo"></i>
-                    </a>
+        </nav>
+
+        <div class="projects-container">
+            <div class="project">
+                <div class="image programming">
+                    <img
+                        class="image-img"
+                        src="/img/portfolioWebsitePreview.png"
+                        alt="pathfinding"
+                    />
+                    <div class="image-overlay">
+                        <div class="image-title">Portfolio Website</div>
+                        <div class="image-description">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Tempore officia voluptatibus est soluta dolore
+                            neque dignissimos, provident voluptatem animi ea
+                            porro in corrupti exercitationem laborum ipsum
+                            architecto odit deserunt eos? Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Distinctio
+                            dolorem cupiditate omnis rem voluptatibus est quis
+                            quisquam? Nemo non, velit reiciendis, cumque
+                            consectetur deleniti repellendus, repudiandae
+                            expedita minus laudantium qui?
+                        </div>
+                        <a
+                            href="https://github.com/Sajganoo/PortfolioWebsite"
+                            target="blank"
+                            style="color: white"
+                        >
+                            <i class="fab fa-github github-logo"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="image arduino">
-                <img class="image-img" src="/img/portfolioWebsitePreview.png" alt="pathfinding">
-                <div class="image-overlay">
-                    <div class="image-title">Snake Game</div>
-                    <div class="image-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore officia voluptatibus est soluta dolore neque dignissimos, provident voluptatem animi ea porro in corrupti exercitationem laborum ipsum architecto odit deserunt eos? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia autem optio nemo voluptatibus. Natus sit recusandae nostrum molestiae repellendus, quis quaerat id vel, distinctio sunt error deleniti facere, earum assumenda.</div>
-                    <a href="https://github.com/Sajganoo/snake" target="blank" style="color: white;">
-                        <i class="fab fa-github github-logo"></i>
-                    </a>
+                <div class="image programming">
+                    <img
+                        class="image-img"
+                        src="/img/portfolioWebsitePreview.png"
+                        alt="pathfinding"
+                    />
+                    <div class="image-overlay">
+                        <div class="image-title">Game Of Life</div>
+                        <div class="image-description">
+                            The Game of Life, also known simply as Life, is a
+                            cellular automaton devised by the British
+                            mathematician John Horton Conway in 1970. It is a
+                            zero-player game, meaning that its evolution is
+                            determined by its initial state, requiring no
+                            further input. One interacts with the Game of Life
+                            by creating an initial configuration and observing
+                            how it evolves. It is Turing complete and can
+                            simulate a universal constructor or any other Turing
+                            machine.
+                        </div>
+                        <a
+                            href="https://github.com/Sajganoo/GameOfLife"
+                            target="blank"
+                            style="color: white"
+                        >
+                            <i class="fab fa-github github-logo"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="image design">
+                    <img
+                        class="image-img"
+                        src="/img/portfolioWebsitePreview.png"
+                        alt="pathfinding"
+                    />
+                    <div class="image-overlay">
+                        <div class="image-title">Pathdinding Visualizer</div>
+                        <div class="image-description">
+                            Pathfinding or pathing is the plotting, by a
+                            computer application, of the shortest route between
+                            two points. It is a more practical variant on
+                            solving mazes. This field of research is based
+                            heavily on Dijkstra's algorithm for finding the
+                            shortest path on a weighted graph. Pathfinding is
+                            closely related to the shortest path problem, within
+                            graph theory, which examines how to identify the
+                            path that best meets some criteria (shortest,
+                            cheapest, fastest, etc) between two points in a
+                            large network.
+                        </div>
+                        <a
+                            href="https://github.com/Sajganoo/PathfindingVisualizer"
+                            target="blank"
+                            style="color: white"
+                        >
+                            <i class="fab fa-github github-logo"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="image arduino">
+                    <img
+                        class="image-img"
+                        src="/img/portfolioWebsitePreview.png"
+                        alt="pathfinding"
+                    />
+                    <div class="image-overlay">
+                        <div class="image-title">Snake Game</div>
+                        <div class="image-description">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Tempore officia voluptatibus est soluta dolore
+                            neque dignissimos, provident voluptatem animi ea
+                            porro in corrupti exercitationem laborum ipsum
+                            architecto odit deserunt eos? Lorem ipsum dolor, sit
+                            amet consectetur adipisicing elit. Quia autem optio
+                            nemo voluptatibus. Natus sit recusandae nostrum
+                            molestiae repellendus, quis quaerat id vel,
+                            distinctio sunt error deleniti facere, earum
+                            assumenda.
+                        </div>
+                        <a
+                            href="https://github.com/Sajganoo/snake"
+                            target="blank"
+                            style="color: white"
+                        >
+                            <i class="fab fa-github github-logo"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>   
-
-</body>
+    </body>
 </html>
