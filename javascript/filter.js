@@ -1,5 +1,6 @@
 const drop_btn = document.querySelector(".drop-btn");
 const drop_btn_arrow = document.querySelector(".drop-btn span");
+const drop_btn_text = document.querySelector(".btn-text");
 const tooltip = document.querySelector(".tooltip");
 
 const menu_wrapper = document.querySelector(".wrapper");
@@ -57,7 +58,6 @@ iot_btn.onclick = () => {
     iot_drop.style.display = "none";
 };
 
-
 const projects = document.querySelectorAll(".image");
 
 const sortProjects = function(name) {
@@ -76,16 +76,12 @@ const sortProjects = function(name) {
     }
 }
 
-
 const selectable = document.querySelectorAll('.selectable');
 
 for (let i = 0; i < selectable.length; i++) {
     selectable[i].addEventListener('click', event => {
-        drop_btn.innerHTML = `${event.target.lastChild.textContent.trim()}<span class="fas fa-caret-down"></span>`;
+        drop_btn_text.innerHTML = event.target.lastChild.textContent.trim();
         sortProjects(event.target.lastChild.textContent.trim().toLowerCase().split(" ")[0]);
         drop_btn.click();
     });
 }
-
-
-
