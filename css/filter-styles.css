@@ -8,12 +8,12 @@ nav {
 
 nav .drop-btn {
     width: 400px;
-    background: rgb(100, 125, 220);
+    background: var(--dark-blue);
     border-radius: 5px;
     line-height: 55px;
     font-size: 20px;
     font-weight: 500;
-    color: white;
+    color: var(--text-color);
     padding: 0 20px;
     cursor: pointer;
 }
@@ -34,7 +34,7 @@ nav .tooltip {
     bottom: -20px;
     height: 15px;
     width: 15px;
-    background: rgb(100, 125, 220);
+    background: var(--dark-blue);
     transform: rotate(45deg);
     display: none;
 }
@@ -50,7 +50,7 @@ nav .wrapper {
     width: 400px;
     overflow: hidden;
     border-radius: 5px;
-    background: rgb(100, 125, 220);
+    background: var(--dark-blue);
     display: none;
     transition: all 0.3s ease;
 }
@@ -72,9 +72,9 @@ nav .wrapper.show {
 }
 
 .wrapper ul li a {
-    width: 400px;
+    width: 380px;
     position: relative;
-    color: white;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 500;
     padding: 0 10px;
@@ -85,7 +85,7 @@ nav .wrapper.show {
 }
 
 .wrapper ul li:hover a {
-    background: rgb(39, 178, 233);
+    background: var(--light-blue);
 }
 
 ul li a .icon {
@@ -107,7 +107,7 @@ ul li a .icon span {
 
 ul li a i {
     position: absolute;
-    right: 30px;
+    right: 20px;
     font-size: 25px;
     pointer-events: none;
 }

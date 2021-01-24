@@ -10,18 +10,18 @@
     justify-content: center;
     margin: 20vh auto 50px auto;
     text-align: center;
-    color: white;
+    color: var(--text-color);
 }
 
 .my-img {
     height: 50%;
     margin: 30px;
     border-radius: 50%;
-    box-shadow: 0px 0px 50px rgb(0, 129, 180);
+    box-shadow: 0px 0px 50px var(--medium-blue);
 }
 
 .txt-type > .txt {
-    border-right: 0.1em solid white;
+    border-right: 0.1em solid var(--text-color);
 }
 
 @media (max-width: 600px) {

@@ -5,5 +5,5 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(#485777, #2b2e3d);
+    background: var(--animation-background);
 }

@@ -15,3 +15,12 @@
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
+:root {
+    /* CSS Variables */
+    --animation-background: radial-gradient(#485777, #2b2e3d);
+    --dark-blue: rgb(100, 125, 220);
+    --medium-blue: rgb(0, 129, 180);
+    --light-blue: rgb(39, 178, 233);
+    --text-color: #ffffff;
+}
