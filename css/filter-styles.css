@@ -18,6 +18,10 @@ nav .drop-btn {
     cursor: pointer;
 }
 
+nav .drop-btn p {
+    display: inline-block;
+}
+
 nav .drop-btn span {
     float: right;
     line-height: 50px;
@@ -68,6 +72,7 @@ nav .wrapper.show {
 }
 
 .wrapper ul li a {
+    width: 400px;
     position: relative;
     color: white;
     font-size: 18px;
@@ -102,7 +107,7 @@ ul li a .icon span {
 
 ul li a i {
     position: absolute;
-    right: 10px;
+    right: 30px;
     font-size: 25px;
     pointer-events: none;
 }
