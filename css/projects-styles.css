@@ -72,7 +72,7 @@
 }
 
 .image-description {
-    font-size: 0.95vw;
+    font-size: 0.90vw;
     padding: 0.5em;
 }
 
@@ -89,10 +89,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .image-title {
-        font-size: 2.5vw;
+        font-size: 2.4vw;
     }
     .image-description {
-        font-size: 1.5vw;
+        font-size: 1.3vw;
     }
 }
 
@@ -104,6 +104,6 @@
         font-size: 5vw;
     }
     .image-description {
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
 }
