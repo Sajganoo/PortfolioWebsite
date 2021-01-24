@@ -16,6 +16,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    display: none;
+}
+
 :root {
     /* CSS Variables */
     --animation-background: radial-gradient(#485777, #2b2e3d);
