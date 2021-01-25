@@ -20,19 +20,17 @@ window.onload = function() {
 
 const setTheme = function(mode) {
     if (mode == 'light') {
-        // document.documentElement.style.setProperty('--animation-background', 'white');
-        // document.documentElement.style.setProperty('--dark-blue', '#985eff');
-        // document.documentElement.style.setProperty('--medium-blue', '');
-        // document.documentElement.style.setProperty('--light-blue', 'cyan');
-        document.documentElement.style.setProperty('--animation-background', 'radial-gradient(#dbb2ff, #985eff)');
-        document.documentElement.style.setProperty('--dark-blue', 'rgb(200, 125, 220)');
-        document.documentElement.style.setProperty('--medium-blue', 'rgb(100, 129, 180)');
-        document.documentElement.style.setProperty('--light-blue', 'rgb(139, 178, 233)');
+        document.documentElement.style.setProperty('--animation-background', 'radial-gradient(#d6ecd2, #519839)');
+        document.documentElement.style.setProperty('--dark-blue', '#49852e');
+        document.documentElement.style.setProperty('--medium-blue', '#5aac44');
+        document.documentElement.style.setProperty('--light-blue', '#7bc86c'); 
+        document.documentElement.style.setProperty('--text-color', 'black');
     } else {
         document.documentElement.style.setProperty('--animation-background', 'radial-gradient(#485777, #2b2e3d)');
         document.documentElement.style.setProperty('--dark-blue', 'rgb(100, 125, 220)');
         document.documentElement.style.setProperty('--medium-blue', 'rgb(0, 129, 180)');
         document.documentElement.style.setProperty('--light-blue', 'rgb(39, 178, 233)');
+        document.documentElement.style.setProperty('--text-color', 'white');
     }
 }
 
