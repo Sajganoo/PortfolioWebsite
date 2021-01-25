@@ -80,11 +80,11 @@
 }
 
 .fa-moon {
-    color: silver;
+    color: var(--light-blue);
 }
 
 .fa-sun {
-    color: #f39c12;
+    color: var(--light-blue);
 }
 
 .toggle-button {
