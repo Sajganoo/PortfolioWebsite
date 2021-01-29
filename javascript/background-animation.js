@@ -3,6 +3,9 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+let currentTheme = localStorage.getItem('currentTheme');
+console.log(currentTheme);
+
 let particlesArray;
 let mouseRadiusRatio = 110;
 let userInteraction = false;
@@ -31,7 +34,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#ffffff';
+        ctx.fillStyle = currentTheme == 'light' ? '#9acc14' : 'white';
         ctx.fill();
     }
 
@@ -109,7 +112,7 @@ function connect() {
             if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                 opacityValue = 1 - (distance / 12000);
                 ctx.lineWidth = 1;
-                ctx.strokeStyle = 'rgba(100, 125, 220, ' + opacityValue + ')';
+                ctx.strokeStyle = currentTheme == 'light' ? 'rgba(154, 204, 20, ' + opacityValue + ')' : 'rgba(100, 125, 220, ' + opacityValue + ')';
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
