@@ -14,7 +14,7 @@
 }
 
 .my-img {
-    height: 50%;
+    height: 300px;
     margin: 30px;
     border-radius: 50%;
     box-shadow: 0px 0px 50px var(--medium-blue);
@@ -27,5 +27,9 @@
 @media (max-width: 600px) {
     .home-container {
         font-size: 80%;
+    }
+
+    .my-img {
+        height: 250px;
     }
 }

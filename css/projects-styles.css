@@ -1,6 +1,6 @@
 .projects-container {
     z-index: 10;
-    position: fixed;
+    position: absolute;
     width: 85%;
     top: 17%;
     left: 7%;
