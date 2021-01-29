@@ -12,7 +12,7 @@
 }
 
 .skill {
-    background: rgba(81, 160, 235, 0.3);
+    background: var(--skills-background);
     backdrop-filter: blur(4px);
     align-self: center;
     justify-self: center;
@@ -25,7 +25,7 @@
 }
 
 .skill:hover {
-    background: rgba(81, 160, 235, 0.5);
+    background: var(--skills-background-hover);
     cursor: default;
 }
 

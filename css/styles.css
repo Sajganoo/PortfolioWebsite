@@ -27,4 +27,7 @@ body {
     --medium-blue: rgb(0, 129, 180);
     --light-blue: rgb(39, 178, 233);
     --text-color: #ffffff;
+    --icon-background: rgb(96, 200, 241);
+    --skills-background: rgba(81, 160, 235, 0.3);
+    --skills-background-hover: rgba(81, 160, 235, 0.5);
 }

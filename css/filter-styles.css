@@ -92,7 +92,7 @@ ul li a .icon {
     height: 40px;
     width: 40px;
     margin-right: 13px;
-    background: rgb(96, 200, 241);
+    background: var(--icon-background);
     display: flex;
     justify-content: center;
     text-align: center;
