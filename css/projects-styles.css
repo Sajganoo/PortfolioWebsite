@@ -1,8 +1,9 @@
 .projects-container {
     z-index: 10;
-    position: relative;
-    top: 120px;
-    width: 80%;
+    position: fixed;
+    width: 85%;
+    top: 17%;
+    left: 7%;
     margin: 10px auto;
     align-items: center;
     justify-content: center;
