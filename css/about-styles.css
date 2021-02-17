@@ -1,0 +1,12 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1500px;
+    height: 100vh;
+    margin: 0px auto;
+    color: white;
+}

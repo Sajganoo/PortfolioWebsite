@@ -60,7 +60,7 @@ iot_btn.onclick = () => {
 
 const projects = document.querySelectorAll(".image");
 
-const sortProjects = function(name) {
+const sortProjects = function (name) {
     if (name === "all") {
         for (let i = 0; i < projects.length; i++) {
             projects[i].style.display = "flex";
@@ -72,16 +72,21 @@ const sortProjects = function(name) {
             } else {
                 projects[i].style.display = "flex";
             }
-        }    
+        }
     }
-}
+};
 
-const selectable = document.querySelectorAll('.selectable');
+const selectable = document.querySelectorAll(".selectable");
 
 for (let i = 0; i < selectable.length; i++) {
-    selectable[i].addEventListener('click', event => {
+    selectable[i].addEventListener("click", (event) => {
         drop_btn_text.innerHTML = event.target.lastChild.textContent.trim();
-        sortProjects(event.target.lastChild.textContent.trim().toLowerCase().split(" ")[0]);
+        sortProjects(
+            event.target.lastChild.textContent
+                .trim()
+                .toLowerCase()
+                .split(" ")[0]
+        );
         drop_btn.click();
     });
 }

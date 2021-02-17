@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wiktor Ciołkowski - Gallery</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/navbar-styles.css" />
+        <link rel="stylesheet" href="css/background-animation-styles.css" />
+        <script src="javascript/navbar.js" defer></script>
+        <script
+            src="https://kit.fontawesome.com/40db5a39f6.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="javascript/background-animation.js" defer></script>
+    </head>
+    <body>
+        <div class="navbar-container">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul class="navbar-menu">
+                <a href="index.html"><li class="navbar-item">Home</li></a>
+                <a href="projects.html"
+                    ><li class="navbar-item">Projects</li></a
+                >
+                <a href="skills.html"><li class="navbar-item">Skills</li></a>
+                <a href="gallery.html"
+                    ><li class="navbar-item active">Gallery</li></a
+                >
+                <a href="about.html"><li class="navbar-item">About me</li></a>
+            </ul>
+            <div class="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+
+        <canvas id="background-animation"></canvas>
+    </body>
+</html>
