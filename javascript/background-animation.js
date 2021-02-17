@@ -1,9 +1,9 @@
-const canvas = document.getElementById('background-animation');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("background-animation");
+const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let currentTheme = localStorage.getItem('currentTheme');
+let currentTheme = localStorage.getItem("currentTheme");
 console.log(currentTheme);
 
 let particlesArray;
@@ -13,10 +13,11 @@ let userInteraction = false;
 const mouse = {
     x: null,
     y: null,
-    radius: (canvas.width / mouseRadiusRatio) * (canvas.height / mouseRadiusRatio)
-}
+    radius:
+        (canvas.width / mouseRadiusRatio) * (canvas.height / mouseRadiusRatio),
+};
 
-window.addEventListener('mousemove', (event) => {
+window.addEventListener("mousemove", (event) => {
     mouse.x = event.x;
     mouse.y = event.y;
 });
@@ -34,7 +35,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = currentTheme == 'light' ? '#9acc14' : 'white';
+        ctx.fillStyle = currentTheme == "light" ? "#9acc14" : "white";
         ctx.fill();
     }
 
@@ -54,13 +55,19 @@ class Particle {
 
             let shift = 5;
             if (distance < mouse.radius + this.size) {
-                if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                if (
+                    mouse.x < this.x &&
+                    this.x < canvas.width - this.size * 10
+                ) {
                     this.x += shift;
                 }
                 if (mouse.x > this.x && this.x > this.size * 10) {
                     this.x -= shift;
                 }
-                if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                if (
+                    mouse.y < this.y &&
+                    this.y < canvas.height - this.size * 10
+                ) {
                     this.y += shift;
                 }
                 if (mouse.y > this.y && this.y > this.size * 10) {
@@ -79,12 +86,12 @@ function init() {
     particlesArray = [];
     let numberOfParticles = (canvas.width * canvas.height) / 8000;
     for (let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 5) + 1
-        let x = Math.random() * ((innerWidth - size * 2) - size * 2) + size * 2;
-        let y = Math.random() * ((innerHeight - size * 2) - size * 2) + size * 2;
-        let dirX = (Math.random() * 5) - 3;
-        let dirY = (Math.random() * 5) - 3;
-        let color = '#000000';
+        let size = Math.random() * 5 + 1;
+        let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
+        let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+        let dirX = Math.random() * 5 - 3;
+        let dirY = Math.random() * 5 - 3;
+        let color = "#000000";
 
         particlesArray.push(new Particle(x, y, dirX, dirY, size, color));
     }
@@ -92,6 +99,7 @@ function init() {
 
 function animation() {
     requestAnimationFrame(animation);
+    currentTheme = localStorage.getItem("currentTheme");
     ctx.clearRect(0, 0, innerWidth, innerHeight);
 
     for (let i = 0; i < particlesArray.length; i++) {
@@ -108,11 +116,14 @@ function connect() {
             if (a === b) continue;
             let dx = particlesArray[a].x - particlesArray[b].x;
             let dy = particlesArray[a].y - particlesArray[b].y;
-            let distance = (dx * dx + dy * dy);
+            let distance = dx * dx + dy * dy;
             if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                opacityValue = 1 - (distance / 12000);
+                opacityValue = 1 - distance / 12000;
                 ctx.lineWidth = 1;
-                ctx.strokeStyle = currentTheme == 'light' ? 'rgba(154, 204, 20, ' + opacityValue + ')' : 'rgba(100, 125, 220, ' + opacityValue + ')';
+                ctx.strokeStyle =
+                    currentTheme == "light"
+                        ? "rgba(154, 204, 20, " + opacityValue + ")"
+                        : "rgba(100, 125, 220, " + opacityValue + ")";
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -122,16 +133,17 @@ function connect() {
     }
 }
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    mouse.radius = (canvas.width / mouseRadiusRatio) * (canvas.height / mouseRadiusRatio);
-})
+    mouse.radius =
+        (canvas.width / mouseRadiusRatio) * (canvas.height / mouseRadiusRatio);
+});
 
-window.addEventListener('mouseout', () => {
+window.addEventListener("mouseout", () => {
     mouse.x = undefined;
     mouse.y = undefined;
-})
+});
 
 init();
 animation();
