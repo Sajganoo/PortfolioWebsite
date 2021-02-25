@@ -21,6 +21,7 @@
 .about-text {
     padding: 30px;
     text-align: center;
+    font-size: 1.8em;
 }
 
 @media (max-width: 1500px) {
@@ -30,15 +31,23 @@
     .about-header {
         font-size: 2.8vw;
         padding: 20px;
+        margin-top: 30px;
+    }
+    .about-text {
+        font-size: 1.6em;
     }
 }
 
 @media (max-width: 1000px) {
     .about-container {
-        width: 90vw;
+        width: 95vw;
     }
     .about-header {
-        font-size: 5vw;
+        font-size: 7vw;
         padding: 10px;
+        margin-top: 150px;
+    }
+    .about-text {
+        font-size: 1.2em;
     }
 }
