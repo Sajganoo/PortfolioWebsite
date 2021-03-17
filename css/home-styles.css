@@ -24,6 +24,16 @@
     border-right: 0.1em solid var(--text-color);
 }
 
+.home-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-container i {
+    margin-top: 50px;
+    font-size: 60px;
+}
+
 @media (max-width: 600px) {
     .home-container {
         font-size: 80%;
