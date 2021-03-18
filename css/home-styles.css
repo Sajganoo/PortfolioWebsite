@@ -36,6 +36,7 @@
 
 @media (max-width: 600px) {
     .home-container {
+        top: 20%;
         font-size: 80%;
     }
 
