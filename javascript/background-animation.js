@@ -8,7 +8,7 @@ console.log(currentTheme);
 
 let particlesArray;
 let mouseRadiusRatio = 110;
-let userInteraction = false;
+let userInteraction = true;
 
 const mouse = {
     x: null,
